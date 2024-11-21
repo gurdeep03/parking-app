@@ -4,12 +4,29 @@ const bcrypt = require('bcryptjs');
 require('dotenv').config();
 const jwt = require('jsonwebtoken');
 
-const SignUp = asyncHandler(async (req, res) => {
-    const { username, email, phoneNumber, password } = req.body;
+const signup = asyncHandler(async (req, res) => {
+    const { username, email, password, confirmPassword } = req.body;
 
-    if (!username || !email || !phoneNumber || !password) {
+    if (!username) {
         res.status(400);
-        throw new Error("Please fill all fields");
+        throw new Error("Username is required");
+    }
+    if (!email) {
+        res.status(400);
+        throw new Error("Email is required");
+    }
+    if (!password) {
+        res.status(400);
+        throw new Error("Password is required");
+    }
+    if (!confirmPassword) {
+        res.status(400);
+        throw new Error("Confirm Password is required");
+    }
+
+    if (password !== confirmPassword) {
+        res.status(400);
+        throw new Error("Passwords do not match");
     }
 
     const userExists = await User.findOne({ email });
@@ -23,7 +40,6 @@ const SignUp = asyncHandler(async (req, res) => {
     const user = await User.create({
         username,
         email,
-        phoneNumber,
         password: hashedPassword
     });
 
@@ -39,7 +55,8 @@ const SignUp = asyncHandler(async (req, res) => {
     }
 });
 
-const LoginUser = asyncHandler(async (req, res) => {
+
+const login = asyncHandler(async (req, res) => {
     const { email, password } = req.body;
     if (!email || !password) {
         res.status(400);
@@ -69,4 +86,4 @@ const LoginUser = asyncHandler(async (req, res) => {
     }
 });
 
-module.exports = { SignUp , LoginUser };
+module.exports = { signup , login };

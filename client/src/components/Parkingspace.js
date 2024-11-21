@@ -14,6 +14,38 @@ const ParkingSpace = () => {
           <div class="parking-slot available">Available</div>
           <div class="parking-slot available">Available</div>
           <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
+          <div class="parking-slot available">Available</div>
           </div>
           </div>
           </div>
